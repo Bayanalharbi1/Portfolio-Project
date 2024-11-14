@@ -4,8 +4,8 @@ from django.shortcuts import render
 from .models import Project, Skill, Technology  
 
 def project_list(request):
-    # projects = Project.objects.all().prefetch_related('technologies')
-    return render(request, 'portfolio/projects.html', {})
+ projects = Project.objects.all().prefetch_related('technologies')
+ return render(request, 'portfolio/projects.html', {})
 
 from django.shortcuts import render
 
