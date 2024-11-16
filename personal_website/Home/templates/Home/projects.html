@@ -1,0 +1,31 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+<section class="myprojects" id="myprojects">
+    <h2 class="title_text">My Projects</h2>
+    <div class="myprojects-container">
+        <div class="mypro-oneline">
+            <div class="mypro-box">
+                <div class="overlay"></div>
+                <img src="static/assets/Maalem.png" alt="Maalem Application" loading="lazy">
+                <div class="info">
+                    <h3 class="pro-name">Maalem Application</h3>
+                    <p>
+                        The Maalem Application is designed to assist tourists in discovering landmark places throughout Saudi Arabia. This interactive platform fosters engagement between tourists and influencers, allowing influencers to share their experiences and insights about various locations.
+                    </p>
+                </div>
+            </div>
+            <div class="mypro-box">
+                <div class="overlay"></div>
+                <img src="static/assets/sp.png" alt="Spartina Monitoring" loading="lazy">
+                <div class="info">
+                    <h3 class="pro-name">Monitoring Spartina Using Self-Supervised Learning</h3>
+                    <p>
+                        This project focuses on environmental science and machine learning to analyze satellite images of wetland plant species. It highlights saltmarsh cordgrass (Spartina Alterniflora), a plant threatened by climate change in the U.S. and invasive in China, using self-supervised learning for conservation strategies.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

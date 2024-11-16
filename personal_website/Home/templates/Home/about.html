@@ -1,0 +1,36 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+<section class="about-section" id="aboutsection">
+    <h2 class="title_text">About Me</h2>
+    <div class="st-container">
+        <div class="about-left">
+            <div class="about-btn">
+                <a href="https://linkedin.com/in/bayanlharbi" target="_blank" aria-label="LinkedIn Profile">
+                    <button><i class="fab fa-linkedin"></i> <span>LinkedIn</span></button>
+                </a>
+                <a href="https://github.com/Bayanalharbi1" target="_blank" aria-label="GitHub Profile">
+                    <button><i class="fab fa-github"></i> <span>GitHub</span></button>
+                </a>
+                <a href="https://brand.site/bayanlharbi" target="_blank" aria-label="Personal Portfolio">
+                    <button><i class="fas fa-globe"></i> <span>Portfolio</span></button>
+                </a>
+            </div>
+        </div>
+        
+        <div class="about-right">
+            <h2>I'm <span>Bayan Alharbi</span>, a <span class="sm">Data Analyst and Full Stack Developer</span></h2>
+            <p>Passionate data analyst and bioinformatics specialist with a strong foundation in leveraging data to drive insights and support decision-making. With a bachelor's degree in Computer Science from Taibah University, I have developed a robust technical skill set that includes proficiency in Python, Power BI, and SQL.</p>
+            <button>Learn More</button>
+        </div>
+        
+        <div class="email-show">
+            <div class="line"></div>
+            <a href="mailto:bayanlharbi@gmail.com" target="_blank" aria-label="Email Bayan Alharbi">
+                <p>bayanlharbi@gmail.com</p>
+            </a>
+            <div class="line"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}

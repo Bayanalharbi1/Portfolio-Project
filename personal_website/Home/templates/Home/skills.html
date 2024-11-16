@@ -1,0 +1,194 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+<section class="skills-sections" id="skillsection">
+    <h2 class="title_text">My Skills</h2>
+    <div class="sk-container">
+        <div class="left-sk">
+            <div class="sk-box" aria-label="Python Skill">
+                <div class="skill-box">
+                    <div class="skill-logo">
+                        <img src="static/assets/python.png" alt="Python" loading="lazy">
+                    </div>
+                    <div class="sk-name">Python</div>
+                </div>
+            </div>
+            <div class="sk-box" aria-label="SQL Skill">
+                <div class="skill-box">
+                    <div class="skill-logo">
+                        <img src="static/assets/sql.png" alt="SQL" loading="lazy">
+                    </div>
+                    <div class="sk-name">SQL</div>
+                </div>
+            </div>
+            <div class="sk-box" aria-label="Power BI Skill">
+                <div class="skill-box">
+                    <div class="skill-logo">
+                        <img src="static/assets/powerbi.png" alt="Power BI" loading="lazy">
+                    </div>
+                    <div class="sk-name">Power BI</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-sk">
+            <div class="sk-box" aria-label="HTML Skill">
+                <div class="skill-box">
+                    <div class="skill-logo">
+                        <img src="static/assets/Html.png" alt="HTML" loading="lazy">
+                    </div>
+                    <div class="sk-name">HTML</div>
+                </div>
+            </div>
+            <div class="sk-box" aria-label="CSS Skill">
+                <div class="skill-box">
+                    <div class="skill-logo">
+                        <img src="static/assets/css.png" alt="CSS" loading="lazy">
+                    </div>
+                    <div class="sk-name">CSS</div>
+                </div>
+            </div>
+            <div class="sk-box" aria-label="Flutter Skill">
+                <div class="skill-box">
+                    <div class="skill-logo">
+                        <img src="static/assets/flutter.png" alt="Flutter" loading="lazy">
+                    </div>
+                    <div class="sk-name">Flutter</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayan Alharbi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
+    <link rel="stylesheet" href="{% static 'style/responsive.css' %}">
+</head>
+
+<body>
+    <a href="#headersection" class="icons-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <main>
+        <div class="myresumebox">
+            <div class="buttonswork">
+                <a href="{% static 'myResume/BAYAN__CV.pdf' %}" download>
+                    <button>Download my Resume</button>
+                </a>
+                <button class="closepfd"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <iframe width="750" height="770" id="myresumeid" src="{% static 'myResume/BAYAN_ALHARBI_CV.pdf' %}" frameborder="0"></iframe>
+        </div>
+
+        <header id="headersection">
+            <div class="logo">
+                <h1>Bayan Alharbi</h1>
+            </div>
+            <nav class="nav">
+                <i class="fa-solid fa-arrow-right close-navbar"></i>
+                <ul class="nav-menu">
+                    <li class="nav-list">
+                        <a href="{% url 'Home:home' %}" class="text-white mx-2">Home</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:about' %}" class="text-white mx-2">About</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:projects' %}" class="text-white mx-2">Projects</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:contact' %}" class="text-white mx-2">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="dark-light-mode nav-dark-light-mode">
+            <i class="fa-regular fa-moon lightmodes"></i>
+            <i class="fa-regular fa-sun darkmodes"></i>
+        </div>
+
+        <div class="signup-btn">
+            <div class="hamburger">
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div class="dark-light-mode">
+                <i class="fa-regular fa-moon lightmodes big-screen"></i>
+                <i class="fa-regular fa-sun darkmodes big-screen"></i>
+            </div>
+        </div>
+
+        <section class="hero-section" id="herosection">
+            <div class="left">
+                <div class="left-text">
+                    <h2>Let's work <br> together to create wonders with us</h2>
+                </div>
+                <div class="boxesss">
+                    <div class="left-para">
+                        <p>A visionary creative, crafting captivating wonders through art and design. Skilled at transforming imagination into extraordinary reality, bringing unique concepts to life with passion and precision.</p>
+                    </div>
+                    <div class="btn-box">
+                        <button>Let's talk</button>
+                        <button id="myresumeopen">My Resume</button>
+                    </div>
+                    <div class="total-static">
+                        <div class="t-st">
+                            <h3>{{ about.experience }}</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="t-st">
+                            <h3>{{ about.project_success }}</h3>
+                            <p>Project Success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="image-box">
+                    <img src="{% static 'assets/bg1.png' %}" alt="About Image">
+                </div>
+                <div class="extra-box">
+                    <div class="bordeblue"></div>
+                    <div class="bordeblue"></div>
+                </div>
+                <div class="dessss">
+                    <div class="dis-skill">
+                        <i class="fa-solid fa-globe"></i>
+                        <p>Full Stack Developer</p>
+                    </div>
+                    <div class="dis-skill">
+                        <i class="fa-solid fa-mobile"></i>
+                        <p>Mobile App Developer</p>
+                    </div>
+                    <div class="dis-skill">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <p>Graphic Designer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+        <script src="{% static 'js/animationgap.js' %}"></script>
+    </main>
+</body>
+
+</html>

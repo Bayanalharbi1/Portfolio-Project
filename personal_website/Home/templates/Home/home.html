@@ -1,0 +1,47 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block title %}Home - Bayan Alharbi{% endblock %}
+
+{% block content %}
+   <section class="hero-section" id="herosection">
+        <div class="left">
+            <div class="left-text">
+                <h2>Let's work <br> together to create wonders with us</h2>
+            </div>
+            <div class="boxesss">
+                <div class="left-para">
+                    <p>A visionary creative, crafting captivating wonders through art and design. Skilled at transforming imagination into extraordinary reality, bringing unique concepts to life with passion and precision.</p>
+                </div>
+                <div class="btn-box">
+                    <button>Let's talk</button>
+                    <button id="myresumeopen">My Resume</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="right">
+            <div class="image-box">
+                <img src="{% static 'assets/bg1.png' %}" alt="About Image">
+            </div>
+            <div class="extra-box">
+                <div class="bordeblue"></div>
+                <div class="bordeblue"></div>
+            </div>
+            <div class="dessss">
+                <div class="dis-skill">
+                    <i class="fa-solid fa-globe"></i>
+                    <p>Full Stack Developer</p>
+                </div>
+                <div class="dis-skill">
+                    <i class="fa-solid fa-mobile"></i>
+                    <p>Mobile App Developer</p>
+                </div>
+                <div class="dis-skill">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <p>Graphic Designer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

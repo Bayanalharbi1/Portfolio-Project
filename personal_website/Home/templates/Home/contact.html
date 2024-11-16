@@ -1,0 +1,47 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+<section class="contact-section" id="contactsection">
+    <h2 class="title_text">Contact Me</h2>
+    <div class="contacts-container">
+        <div class="contactus-link">
+            <a href="https://linkedin.com/in/bayanlharbi" target="_blank">
+                <button><i class="fab fa-linkedin"></i> <span>LinkedIn</span></button>
+            </a>
+            <a href="https://github.com/Bayanalharbi1" target="_blank">
+                <button><i class="fab fa-github"></i> <span>GitHub</span></button>
+            </a>
+        </div>
+        <div class="contact-form-container">
+            <h2 class="title_text">Send a Message</h2>
+
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <div class="input-box">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Enter your message" required></textarea>
+                </div>
+                <div class="input-box">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
