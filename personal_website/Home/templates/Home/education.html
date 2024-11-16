@@ -1,0 +1,59 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+<section class="education-section">
+    <h2 class="title_text">Education</h2>
+    <div class="education-container">
+        <div class="ed-box">
+            <div class="ed-image">
+                <img src="{% static 'assets/Taibah.png' %}" alt="TAIBAH University">
+            </div>
+            <div class="ed-content">
+                <div class="name-ed">TAIBAH University</div>
+                <div class="date-ed">Aug 2018 - Aug 2023</div>
+                <div class="institution-ed">Bachelor's Degree in Computer Science (GPA: 4.8)</div>
+            </div>
+        </div>
+        <div class="ed-box">
+            <div class="ed-image">
+                <img src="{% static 'assets/duke.png' %}" alt="Duke University">
+            </div>
+            <div class="ed-content">
+                <div class="name-ed">Duke University</div>
+                <div class="date-ed">May 2024 - Aug 2024</div>
+                <div class="institution-ed">Data+ Research Program (Data Analysis and Visualization)</div>
+            </div>
+        </div>
+        <div class="ed-box">
+            <div class="ed-image">
+                <img src="{% static 'assets/Kaust.png' %}" alt="KAUST Academy">
+            </div>
+            <div class="ed-content">
+                <div class="name-ed">KAUST Academy</div>
+                <div class="date-ed">Sep 2023 - Mar 2024</div>
+                <div class="institution-ed">Bioinformatics Program</div>
+            </div>
+        </div>
+        <div class="ed-box">
+            <div class="ed-image">
+                <img src="{% static 'assets/sdaia.png' %}" alt="SDAIA Academy">
+            </div>
+            <div class="ed-content">
+                <div class="name-ed">SDAIA - Tuwaiq Academy</div>
+                <div class="date-ed">Sep 2024 - Dec 2024</div>
+                <div class="institution-ed">Data Management Program</div>
+            </div>
+        </div>
+        <div class="ed-box">
+            <div class="ed-image">
+                <img src="{% static 'assets/Tuwaiq.png' %}" alt="Tuwaiq Academy">
+            </div>
+            <div class="ed-content">
+                <div class="name-ed">Tuwaiq Academy</div>
+                <div class="date-ed">Sep 2024 - Dec 2024</div>
+                <div class="institution-ed">Full Stack Program</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -27,7 +27,7 @@ def contact(request: HttpRequest) -> HttpResponse:
         message = request.POST.get('message')
         contact = Contact(name=name, email=email, message=message)
         contact.save()
-        return redirect('contact')  # Adjust this if you have a specific URL name for the contact page
+        return redirect('Home:contact')  
     return render(request, 'Home/contact.html')
 
 def experience(request: HttpRequest) -> HttpResponse:

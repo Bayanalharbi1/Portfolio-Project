@@ -1,5 +1,6 @@
 {% extends "Home/base.html" %}
 {% load static %}
+
 {% block content %}
 <section class="contact-section" id="contactsection">
     <h2 class="title_text">Contact Me</h2>
@@ -23,7 +24,7 @@
                 </ul>
             {% endif %}
 
-            <form action="{% url 'contact' %}" method="post">
+            <form action="{% url 'Home:contact' %}" method="post"> 
                 {% csrf_token %}
                 <div class="input-box">
                     <label for="name">Name</label>
