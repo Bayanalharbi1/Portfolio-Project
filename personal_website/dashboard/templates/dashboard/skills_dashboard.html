@@ -1,0 +1,37 @@
+{% extends "Home/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Skills</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Proficiency</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for skill in skills %}
+            <tr>
+                <td>{{ skill.name }}</td>
+                <td>{{ skill.proficiency }}</td>
+                <td>
+                    <a href="{% url 'edit_skill' skill.pk %}" class="btn btn-sm btn-primary">Edit</a>
+                    <form action="{% url 'delete_skill' skill.pk %}" method="POST" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3" class="text-center">No skills found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'add_skill' %}" class="btn btn-success">Add New Skill</a>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block content %}
+<h2>Delete Confirmation</h2>
+<p>Are you sure you want to delete "{{ item }}"?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Yes, delete</button>
+</form>
+<a href="{% if item.__class__ == 'Skill' %}{% url 'skills_dashboard' %}{% else %}{% url 'projects_dashboard' %}{% endif %}">Cancel</a>
+{% endblock %}

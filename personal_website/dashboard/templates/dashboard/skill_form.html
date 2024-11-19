@@ -1,0 +1,18 @@
+{% extends "Home/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">{% if form.instance.pk %}Edit{% else %}Add{% endif %} Skill</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="btn btn-primary">
+            {% if form.instance.pk %}Update{% else %}Create{% endif %}
+        </button>
+        <a href="{% url 'skills_dashboard' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
