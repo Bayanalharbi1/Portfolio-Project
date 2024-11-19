@@ -2,7 +2,7 @@ from django.db import models
 
 class Skill(models.Model):
     name = models.CharField(max_length=100)
-    proficiency = models.CharField(max_length=50)  # e.g., Beginner, Intermediate, Advanced
+    proficiency = models.CharField(max_length=50)  
 
     def __str__(self):
         return self.name
