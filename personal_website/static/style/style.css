@@ -2,7 +2,7 @@
     --backgroundcolor:rgb(63, 85, 91);
     --textcolor:white;
     --buttonbg:white;
-    --hovercolor:rgb(187, 168, 203);
+    --hovercolor:rgb(204, 166, 201);
     --heroborderedcolor:rgba(255, 255, 255, 0.51);
     --heroiconcolor:rgb(20, 160, 220);
     --hovertextcolor:white;
@@ -13,6 +13,22 @@
     --shadow2:10px 10px 20px rgba(63, 62, 62, 0.5),-10px -10px 20px rgba(63, 62, 62, 0.5);
 --skbackground :  rgb(91, 1, 1);
 --newlightcolor: #017bfd;
+}
+.darkmode{
+    --backgroundcolor:rgb(230, 228, 228);
+    --textcolor:rgb(0, 0, 0);
+    --buttonbg:white;
+    --hovercolor:darkblue;
+    --hovercolor2:2px solid darkblue;
+    --heroborderedcolor:rgb(75, 74, 74);
+    --heroiconcolor:rgb(20, 160, 220);
+    --hovertextcolor:white;
+    --bntdarkbluecolor:darkblue;
+    --whiteblack:white;
+    --blackcolor:black;
+    --shadow2:10px 10px 20px rgba(63, 62, 62, 0.1),-10px -10px 20px rgba(63, 62, 62, 0.1);
+--skbackground :  transparent;
+
 }
 *{
     margin: 0;
@@ -113,29 +129,7 @@ color: var(--hovertextcolor);
     gap: 30px;
   
 }
-.dark-light-mode,.hamburger{
-background-color: var(--newlightcolor);
-padding:10px 20px;
-border-radius: 10px 20px;
-cursor: pointer;
 
-}
-.dark-light-mode i,.hamburger i{
-    font-size: 1.5rem;
-    color: white;
-    }
-.signup-btn button{
-    padding: 8px 20px;
-    font-size: 1rem;
-    border-radius: 15px;
-    border: none;
-    font-family: "Edu AU VIC WA NT Hand", cursive;
-    font-weight: bold;
-
-}
-.hamburger{
-    display: none;
-}
 /* end header design form here  */
 
 /* start herosection design form here  */
@@ -168,7 +162,7 @@ cursor: pointer;
     overflow: hidden;
 }
 .left h2{
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 600;
     font-family: "Ubuntu", sans-serif;
     text-transform: capitalize;
@@ -251,7 +245,7 @@ border: none;
 }
 .right .image-box{
     width: 100%;
-    height: 650px;
+    height: auto;
     z-index: 10;
 }
 .right .image-box img{
@@ -284,54 +278,7 @@ position: absolute;
     top: 180px;
     left: 62px;
 }
-.dis-skill{
-    position: absolute;
-    width: 200px;
-    border-radius: 50px;
-    padding:8px 10px;
-    color: var(--textcolor);
-    display: flex;
-    justify-content: center;
-    background-color: var(--buttonbg);
-    box-shadow: var(--shadow);
 
-
-}
-
-.right .dis-skill:nth-child(1)
-{
-    top:160px;
-    right: 12px;
-    
-}
-.dis-skill:nth-child(2)
-{
-    top:330px;
-    right: 0px;
-}
-.dis-skill:nth-child(3)
-{
-    top:480px;
- 
-    right: 90px;
-
- 
-}
-.dis-skill p {
-    font-family: "Ubuntu", sans-serif;
-    /* font-weight: bold; */
-    text-transform: capitalize;
-    color: var(--blackcolor);
-}
-.dis-skill i{
-    position: absolute;
-    left: -15px;
-    top: -20px;
-    color: var(--heroiconcolor);
-    font-size: 2rem;
-    z-index: 1;
-
-}
 /* end herosection design form here  */
 /* start about section design form here  */
 .about-section{
@@ -369,9 +316,7 @@ position: absolute;
     border-radius: 40px 50px;
     position: relative;
 }
-.about-left img{
- object-fit: cover;
-}
+
 .about-right{
     width: calc(100% - 450px);
     /* border: 2px solid red; */
@@ -410,7 +355,7 @@ position: absolute;
 }
 .about-btn{
     padding: 20px;
-    /* border: 2px solid red; */
+    border: 2px solid rgb(210, 169, 223); 
     position: absolute;
 
 }

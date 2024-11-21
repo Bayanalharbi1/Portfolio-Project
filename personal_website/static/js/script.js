@@ -40,45 +40,16 @@ darkmodebtn.forEach((data)=>{
 
 // for responsive navbar 
 
-const navbar = document.querySelector(".nav")
-const closenavbar = document.querySelector(".close-navbar")
-const narbarstart = document.querySelector(".hamburger")
+const navbar = document.querySelector(".nav");
+const closenavbar = document.querySelector(".close-navbar");
 
-narbarstart.addEventListener("click",()=>{
-    navbar.style.right = "18px"
-})
-closenavbar.addEventListener("click",()=>{
-    navbar.style.right = "-100%"
-})
+navbarStart.addEventListener("click", () => {
+    navbar.classList.add("open");
+});
 
-
-
-
-const closepdf = document.querySelector(".closepfd")
-const openpdfbox = document.querySelector("#myresumeopen")
-const pdfbox = document.querySelector(".myresumebox")
-
-
-
-openpdfbox.addEventListener("click",()=>{
-    pdfbox.style.display = "flex"
-   
-    document.body.style.position = 'fixed';
-    document.body.style.top = '0';
-    document.body.style.left = '0';
-    document.body.style.width = '100%';
-    document.body.style.height = '100%';
-    document.body.style.overflow = 'hidden';
-})
-closepdf.addEventListener("click",()=>{
-    pdfbox.style.display = "none"
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.width = '';
-    document.body.style.height = '';
-    document.body.style.overflow = '';
-})
+closenavbar.addEventListener("click", () => {
+    navbar.classList.remove("open");
+});
 
 
 

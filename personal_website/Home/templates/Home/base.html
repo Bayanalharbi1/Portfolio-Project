@@ -17,8 +17,20 @@
 </head>
 
 <body>
-
+    <a href="#headersection" class="icons-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
     <main>
+        <div class="myresumebox">
+            <div class="buttonswork">
+                <a href="{% static 'myResume/BAYAN__CV.pdf' %}" download>
+                    <button>Download my Resume</button>
+                </a>
+                <button class="closepfd"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <iframe width="750" height="770" id="myresumeid" src="{% static 'myResume/BAYAN_ALHARBI_CV.pdf' %}" frameborder="0"></iframe>
+        </div>
+
         <header id="headersection">
             <div class="logo">
                 <h1>Bayan Alharbi</h1>
@@ -26,25 +38,32 @@
             <nav class="nav">
                 <i class="fa-solid fa-arrow-right close-navbar"></i>
                 <ul class="nav-menu">
-                    <li class="nav-list"><a href="{% url 'Home:home' %}" class="text-white mx-2">Home</a></li>
-                    <li class="nav-list"><a href="{% url 'Home:about' %}" class="text-white mx-2">About</a></li>
-                    <li class="nav-list"><a href="{% url 'Home:projects' %}" class="text-white mx-2">Projects</a></li>
-                    <li class="nav-list"><a href="{% url 'Home:contact' %}" class="text-white mx-2">Contact</a></li>
-                    <li class="nav-list"><a href="{% url 'Home:skills' %}" class="text-white mx-2">Skills</a></li>
-                    <li class="nav-list"><a href="{% url 'Home:education' %}" class="text-white mx-2">Education</a></li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:home' %}" class="text-white mx-2">Home</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:about' %}" class="text-white mx-2">About</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:projects' %}" class="text-white mx-2">Projects</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:contact' %}" class="text-white mx-2">Contact</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:skills' %}" class="text-white mx-2">Skills</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="{% url 'Home:education' %}" class="text-white mx-2">Education</a>
+                    </li>
                 </ul>
             </nav>
         </header>
 
-        <div class="signup-btn">
-            <div class="hamburger">
-                <i class="fa-solid fa-sliders"></i>
-            </div>
-        </div>
-
         {% block content %}
         {% endblock %}
 
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
             integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>

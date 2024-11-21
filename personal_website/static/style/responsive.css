@@ -29,12 +29,6 @@
     }
 
   
-    .dashed-box{
-    
-        /* right: -56px; */
-        /* display: none; */
-      
-    }
 
     .right-sk .sk-box .skill-box .skill-logo{
   
@@ -63,21 +57,6 @@
     
     
     }
-    .right .dis-skill:nth-child(1)
-{
-   
-    right: 30px;
-    
-}
-
-.dis-skill:nth-child(3)
-{
-  
- 
-    right: 50px;
-
- 
-}
 .mypro-box{
     width: 400px;
     height: 350px;
@@ -280,9 +259,7 @@ order: -1;
         justify-content: center;
         }
         
-        .contactus-link{
-          /* width: 14rem; */
-        }
+
        
         .contact-us-image-box{
             display:none;
@@ -319,71 +296,33 @@ order: -1;
 }
 
 
-@media screen and (max-width:900px) {
-
-    .close-navbar{
-        display: block;
+@media (max-width: 768px) {
+    .nav ul {
+        display: none; /* Hidden by default */
+        flex-direction: column;
         position: absolute;
-        right: 30px;
-        top: 20px;
-        font-size: 2rem;
-        cursor: pointer;
-        transition: all .2s linear;
-        color: var(--buttonbg);
+        top: 80px; /* Positioned below the header */
+        right: 0; /* Flush with the right edge */
+        background-color: var(--backgroundcolor); /* Use CSS variable */
+        padding: 20px;
+        border-radius: 8px;
+        width: 200px;
+        transform: scale(0.95);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        z-index: 1000; /* Ensure it's above other elements */
     }
-    .close-navbar:hover{
-       color: red;
-    }
-    .nav{
-        position: fixed;
-        background-color: rgba(21, 19, 38, 0.633);
-        width: 250px;
-        top: 0px;
-        right: -100%;
-        bottom: 0px;
-        padding:70px 20px 20px 20px;
-        
-        height: 100vh;
-        backdrop-filter: blur(5px);
-        transition: all .1s linear;
-        z-index: 1000;
 
+    .nav ul li {
+        margin: 10px 0; /* Add spacing between menu items */
     }
-  
-    .nav ul{
-        display: block;
-        
-        ;
-        /* background: #000; */
-    }
-    .nav ul li{
-        display: block;
-        margin: 5px 0;
-        /* background: #000; */
-    }
-    .nav ul li a{
-     color: var(--buttonbg);
-    }
-    .hamburger{
-        display: block;
-    }
-    .dark-light-mode {
-        display: none;
-    }
-    .nav-dark-light-mode{
-        display: block;
-        }
 
-
-
-        .exp-box{
-         left: 0;
-         right: 0;
-         top: 0;
-
-        
-        }
-    
+    .nav ul.show {
+        display: flex; /* Make the menu visible */
+        transform: scale(1);
+        opacity: 1;
+    }
+}
         
         
         .exp-box:nth-child(2n - 1){
@@ -410,7 +349,7 @@ order: -1;
                 }
       
     
-}
+
 
 @media screen  and (max-width:750px) {
     .service-section{
@@ -699,39 +638,12 @@ order: -1;
         padding:25px 20px;
     }
    
- .hamburger {
-    padding:10px 15px ;
- }
- .hamburger i{
-    font-size: 1.2rem;
- }
+
  .logo h1{
  font-size: 1.8rem;
 }
-    .right .dis-skill:nth-child(1)
-    {
-       top: 300px;
-        left: 110px;
-        
-    }
     
-    .dis-skill:nth-child(2)
-    {
-      
-     top: 350px;
-     left: 110px;
     
-     
-    }
-    
-    .dis-skill:nth-child(3)
-    {
-      
-     top: 400px;
-     left: 110px;
-    
-     
-    }
  
    
 }
@@ -756,7 +668,7 @@ order: -1;
       
       }  
       .left h2{
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       .total-static{
         flex-wrap: wrap;
